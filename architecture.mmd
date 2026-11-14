@@ -1,0 +1,15 @@
+flowchart TD
+    A[User enters lifestyle information] --> B[Transportation inputs]
+    A --> C[Home energy inputs]
+    A --> D[Lifestyle inputs]
+    B --> E[Input preprocessing]
+    C --> E
+    D --> E
+    E --> F[Linear Regression and Random Forest]
+    F --> G[Ensemble prediction]
+    E --> H[Category-specific Random Forest regressors]
+    G --> I[Overall annual footprint estimate]
+    H --> J[Transportation, home energy and lifestyle estimates]
+    I --> K[Streamlit results and visualizations]
+    J --> K
+    K --> L[Feature insights and reduction suggestions]

@@ -7,7 +7,7 @@ A Streamlit-based application that estimates an individual's annual carbon footp
 **Try the application here:** 
 [Carbon Footprint Calculator – Live App](https://carbon-footprint-calculator-mato.streamlit.app/)
 
-> **Source code:** The implementation repository is kept private. The public showcase contains project documentation and presentation materials only. Source code can be discussed or shared privately upon request.
+> **Source code:** The implementation repository is kept private. The public showcase contains project documentation, demo and presentation materials only. Source code can be discussed or shared privately upon request.
 
 ## Project overview
 

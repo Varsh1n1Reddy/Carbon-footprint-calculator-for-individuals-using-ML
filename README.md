@@ -61,20 +61,25 @@ The report describes the ensemble as an approach intended to combine the strengt
 
 ```mermaid
 flowchart TD
-    A[User enters lifestyle information] --> B[Transportation inputs]
-    A --> C[Home energy inputs]
-    A --> D[Lifestyle inputs]
-    B --> E[Input preprocessing]
-    C --> E
+    A["User Input<br/>Transportation, Home Energy & Lifestyle"] 
+    --> B["Data Preprocessing<br/>Missing Value Imputation, Encoding & Scaling"]
+
+    B --> C["Linear Regression"]
+    B --> D["Random Forest Regression"]
+
+    C --> E["Ensemble Model"]
     D --> E
-    E --> F[Linear Regression and Random Forest]
-    F --> G[Ensemble prediction]
-    E --> H[Category-specific Random Forest regressors]
-    G --> I[Overall annual footprint estimate]
-    H --> J[Transportation, home energy and lifestyle estimates]
-    I --> K[Streamlit results and visualizations]
-    J --> K
-    K --> L[Feature insights and reduction suggestions]
+
+    E --> F["Final Carbon Footprint Prediction"]
+    F --> G["Streamlit Dashboard<br/>Results & Visualization"]
+
+    style A fill:#E8F1FF,stroke:#3973B9,color:#1A1A1A
+    style B fill:#E8F1FF,stroke:#3973B9,color:#1A1A1A
+    style C fill:#E9F7EF,stroke:#27834A,color:#1A1A1A
+    style D fill:#E9F7EF,stroke:#27834A,color:#1A1A1A
+    style E fill:#FFF1D6,stroke:#D69A24,color:#1A1A1A
+    style F fill:#F1E8FF,stroke:#8054B5,color:#1A1A1A
+    style G fill:#F1E8FF,stroke:#8054B5,color:#1A1A1A
 ```
 
 ## Technology stack
